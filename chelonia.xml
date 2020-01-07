@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<element name="Onyx Pendant" type="Magic Item" source="Homebrew" id="ID_ROCKTEM_CHELONIA_MAGIC_ITEM_ONYX_PENDANT">
+		<description>
+			<p class="indent">This amulet exudes a cold aura and chills to the touch. The jade rings that wrap around the body of the pendant coming to a halt as it approaches the onyx gem affixed to the center of the piece almost glows with a feeling of death. Lost souls that come near the pendant will lose a small part of themselves upon passing as the onyx gem absorbs and replicates parts of the undead's past. However, the gem, as if having consciousness, always returns the soul the part of them that they lost.</p>
+			<p class="indent">Book One: Using the power of this gem, the attuned creature may take upon the form of any humanoid that has died within a minute near the gem or whose soul has come in contact with the pendant. As the form of the dead humanoid, you appear to others as how they looked before their death, that includes height, weight, facial features, the sound of your voice, coloration, hair length, sex, clothes, and injuries. The user can appear as a different size or form than they originally were and will maintain knowledge of any fleeting memories that the humanoid once had. Those memories are limited to things the humanoid had thought of before death and events they remember as far as the day before they died.</p>
+			<p class="indent">Book Two: Using the power of this gem, the attuned creature may use the power within a soul fragment to transfer a part of the soul's memory to another creature. Doing this will burn up the soul fragment within the gem. Charisma based checks using this ability can be made with advantage.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">neck</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+		</setters>
+	</element>
+	
+	<element name="Sir Goldrick's Goldfish" type="Spell" source="Homebrew" id="ID_ROCKTEM_CHELONIA_SPELL_SIR_GOLDRICK'S_GOLDFISH">
+    <supports>Wizard</supports>
+    <description>
+      <p>Water encircles your hand as you face your palm towards a point choose within range. As the water reaches the center of your palm, a giant sphere of water forms above the selected point and transforms into a massive goldfish. Each creature in a 20-foot-radius sphere centered on that point must make a dexterity saving throw. A target takes 4d6 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, on a failed save, if the creature is of size medium or lower, they are restrained and in full cover. The goldfish remains on the field as an obstruction until attacked or until a round passes. When attacked or after 1 round, the goldfish turns back into water, spiraling into the form of a serpentine dragon. All creatures in a 30-foot-radius sphere centered on the original point takes must make a dexterity saving throw. A target takes 4d6 cold damage on a failed save, or half as much on a successful one. </p>
+	  <p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 4th level to 7th level, the damage increases by 1d6 for each slot level above 3rd.</p>
+    </description>
+    <setters>
+      <set name="keywords"></set>
+      <set name="level">3</set>
+      <set name="school">Conjuration</set>
+      <set name="time">1 action</set>
+      <set name="duration">Instantaneous</set>
+      <set name="range">150 feet</set>
+      <set name="hasVerbalComponent">true</set>
+      <set name="hasSomaticComponent">true</set>
+      <set name="hasMaterialComponent">true</set>
+      <set name="materialComponent">a small goldfish and water</set>
+      <set name="isConcentration">false</set>
+      <set name="isRitual">false</set>
+    </setters>
+  </element>
+  <!-- temp extra spells -->
+  <element name="Expanded Spellbook" type="Option" source="My Homebrew Source" id="ID_BREW_OPTION_EXPANDED_SPELLBOOK">
+    <description>
+      <p>Add additional optional spell slots for the wizard.</p>
+    </description>
+    <sheet>
+      <description>Add more spaces to save spells for the wizard per spells written into the book.</description>
+    </sheet>
+    <rules>
+      <select type="Spell" name="Expanded Spellbook (Wizard)" supports="Wizard" level="1" number="3" optional="true" spellcasting="Wizard" requirements="ID_WOTC_PHB_CLASS_FEATURE_WIZARD_SPELLCASTING_WIZARD" />
+    </rules>
+  </element>
+</elements>
