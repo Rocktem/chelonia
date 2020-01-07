@@ -53,7 +53,7 @@
       <description>Add more spaces to save spells for the wizard per spells written into the book.</description>
     </sheet>
     <rules>
-      <select type="Spell" name="Expanded Spellbook (Wizard)" supports="Wizard" level="1" number="20" optional="true" spellcasting="Wizard" requirements="ID_WOTC_PHB_CLASS_FEATURE_WIZARD_SPELLCASTING_WIZARD" />
+      <select type="Spell" name="Expanded Spellbook (Wizard)" supports="Wizard" level="1" number="4" optional="true" spellcasting="Wizard" requirements="ID_WOTC_PHB_CLASS_FEATURE_WIZARD_SPELLCASTING_WIZARD" />
     </rules>
   </element>
 </elements>
