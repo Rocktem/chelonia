@@ -2,11 +2,7 @@
 <index>
 	<info>
 		<name>Chelonia</name>
-		<description>
-		</description>
-		<author url="">
-		</author>
-		<update version="0.0.1" revised="">
+		<update version="0.0.1">
 			<file name="chelonia.index" url="https://raw.githubusercontent.com/Rocktem/chelonia/master/chelonia.index" />
 		</update>
 	</info>
