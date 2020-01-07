@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Chelonia Elements</name>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="chelonia.xml" url="https://raw.githubusercontent.com/Rocktem/chelonia/master/chelonia.xml" />
 		</update>
 	</info>
