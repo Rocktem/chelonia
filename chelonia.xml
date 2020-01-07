@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+		<name>Chelonia</name>
+		<description></description>
+		<update version="0.0.2">
+			<file name="chelonia.xml" url="https://raw.githubusercontent.com/Rocktem/chelonia/master/chelonia.xml" />
+		</update>
+	</info>
 	<element name="Onyx Pendant" type="Magic Item" source="Homebrew" id="ID_ROCKTEM_CHELONIA_MAGIC_ITEM_ONYX_PENDANT">
 		<description>
 			<p class="indent">This amulet exudes a cold aura and chills to the touch. The jade rings that wrap around the body of the pendant coming to a halt as it approaches the onyx gem affixed to the center of the piece almost glows with a feeling of death. Lost souls that come near the pendant will lose a small part of themselves upon passing as the onyx gem absorbs and replicates parts of the undead's past. However, the gem, as if having consciousness, always returns the soul the part of them that they lost.</p>
