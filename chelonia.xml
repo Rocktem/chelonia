@@ -2,11 +2,13 @@
 <elements>
 	<info>
 		<name>Chelonia Elements</name>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="chelonia.xml" url="https://raw.githubusercontent.com/Rocktem/chelonia/master/chelonia.xml" />
 		</update>
 	</info>
-	<element name="Onyx Pendant" type="Magic Item" source="Homebrew" id="ID_ROCKTEM_CHELONIA_MAGIC_ITEM_ONYX_PENDANT">
+	
+	<!-- Items -->
+	<element name="Onyx Pendant" type="Magic Item" source="Chelonia" id="ID_ROCKTEM_CHELONIA_MAGIC_ITEM_ONYX_PENDANT">
 		<description>
 			<p class="indent">This amulet exudes a cold aura and chills to the touch. The jade rings that wrap around the body of the pendant coming to a halt as it approaches the onyx gem affixed to the center of the piece almost glows with a feeling of death. Lost souls that come near the pendant will lose a small part of themselves upon passing as the onyx gem absorbs and replicates parts of the undead's past. However, the gem, as if having consciousness, always returns the soul the part of them that they lost.</p>
 			<p class="indent">Book One: Using the power of this gem, the attuned creature may take upon the form of any humanoid that has died within a minute near the gem or whose soul has come in contact with the pendant. As the form of the dead humanoid, you appear to others as how they looked before their death, that includes height, weight, facial features, the sound of your voice, coloration, hair length, sex, clothes, and injuries. The user can appear as a different size or form than they originally were and will maintain knowledge of any fleeting memories that the humanoid once had. Those memories are limited to things the humanoid had thought of before death and events they remember as far as the day before they died.</p>
@@ -23,7 +25,55 @@
 		</setters>
 	</element>
 	
-	<element name="Sir Goldrick's Goldfish" type="Spell" source="Homebrew" id="ID_ROCKTEM_CHELONIA_SPELL_SIR_GOLDRICK'S_GOLDFISH">
+	<element name="Tala (Ring)" type="Magic Item" source="Chelonia" id="ID_ROCKTEM_CHELONIA_MAGIC_ITEM_TALA_RING">
+		<description>
+			<p>As you first wear the ring as its attuned creature, you recognize the color first shift into a dull grey from it's original clear coloration. Spending time with it, you tend to notice the ring shift in color, with differing words etched upon it for each shift in color. In due time, it is pretty easy to recognize that the ring shifts in the palette based on the emotions you feel and through contact with others they feel similar things to you.</p>
+			<p class="indent">The ring essentially allows you to share your emotions with others through touch </p>
+			<p class="indent">The following section will be updated as you further discover aspects of the ring. </p>
+			<p class="indent">The following effects are what you've noted down occurs when the ring is of a certain color and word, as well as when you touch somebody with the hand the ring is on:</p>
+			<table>
+				<thead>
+					<tr><td>Name</td><td>Color</td><td>Emotion</td><td>Effect</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>Merri</td><td>Yellow</td><td>Joy</td><td>While your hand is on them, they become boistrous and full of life</td></tr>
+					<tr><td>Reger</td><td>Teal</td><td>Pity</td><td>While your hand is on them, they simply feel the pity that you feel for them.</td></tr>
+					<tr>
+						<td>Sloth</td><td>Orange</td><td>Tranquility</td>
+						<td>
+							<p>When used, it will apply the effects of “Calm Emotions” with a Spell save DC equal to the caster's spell save dc.</p>
+							<p><b>Effects of Calm Emotions:</b></p>
+							<p><i>Enchantment Spell</i></p>
+							<p>The targeted creature must make a Charisma Saving throw, a creature can choose to fail the save if it wishes to do so.</p>
+							<p>If a creature fails its saving throw, choose one of the following two effects.</p>
+							<p class="indent">1. You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.</p>
+							<p class="indent">2. You can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.</p>
+							<p>After the first touch, the effects linger for 30 seconds without concentration</p>
+						</td>
+					</tr>
+					<tr><td>Alara</td><td>Black</td><td>Fear</td><td>Not sure, have not tried</td></tr>
+					<tr><td>Cecreden</td><td>White</td><td>Trust</td><td>Not sure, have not tried</td></tr>
+					<tr><td>Loa</td><td>Brown</td><td>Hostility</td><td>Not sure, have not tried</td></tr>
+					<tr><td>Ziszle</td><td>Pink</td><td>Passion</td><td>Not sure, have not tried</td></tr>
+					<tr><td>Frieg</td><td>Blue</td><td>Sorrow</td><td>Not sure, have not tried</td></tr>
+					<tr><td>Puff</td><td>Red</td><td>Fury</td><td>Not sure, have not tried</td></tr>
+					<tr><td>Dista</td><td>Purple</td><td>Disgust</td><td>Not sure, have not tried</td></tr>
+					<tr><td>Satella</td><td>Green</td><td>Envy</td><td>Not sure, have not tried</td></tr>
+				</tbody>
+			</table>
+		</description>
+		<setters>
+			<set name="category">Rings</set>
+			<set name="type">Ring</set>
+			<set name="rarity">Legendary</set>
+			<set name="slot">ring</set>
+			<set name="equippable">true</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+	
+	<!-- Spells -->
+	<element name="Sir Goldrick's Goldfish" type="Spell" source="Chelonia" id="ID_ROCKTEM_CHELONIA_SPELL_SIR_GOLDRICK'S_GOLDFISH">
     <supports>Wizard</supports>
     <description>
       <p>Water encircles your hand as you face your palm towards a point choose within range. As the water reaches the center of your palm, a giant sphere of water forms above the selected point and transforms into a massive goldfish. Each creature in a 20-foot-radius sphere centered on that point must make a dexterity saving throw. A target takes 4d6 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, on a failed save, if the creature is of size medium or lower, they are restrained and in full cover. The goldfish remains on the field as an obstruction until attacked or until a round passes. When attacked or after 1 round, the goldfish turns back into water, spiraling into the form of a serpentine dragon. All creatures in a 30-foot-radius sphere centered on the original point takes must make a dexterity saving throw. A target takes 4d6 cold damage on a failed save, or half as much on a successful one. </p>
@@ -44,7 +94,8 @@
       <set name="isRitual">false</set>
     </setters>
   </element>
-  <!-- temp extra spells -->
+  
+  <!-- Features -->
   <element name="Expanded Spellbook" type="Option" source="My Homebrew Source" id="ID_BREW_OPTION_EXPANDED_SPELLBOOK">
     <description>
       <p>Add additional optional spell slots for the wizard.</p>
@@ -56,4 +107,139 @@
       <select type="Spell" name="Expanded Spellbook (Wizard)" supports="Wizard" level="1" number="4" optional="true" spellcasting="Wizard" requirements="ID_WOTC_PHB_CLASS_FEATURE_WIZARD_SPELLCASTING_WIZARD" />
     </rules>
   </element>
+  
+  <!-- Subclasses -->
+  
+  <!-- Path of the Alter Ego -->
+  <element name="Path of the Alter Ego" type="Archetype" source="Chelonia" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_PATH_OF_THE_ALTER_EGO">
+		<supports>Primal Path</supports>
+		<description>
+			<p>Emotions are a fickle thing and you take it further to the extremes. From your extreme emotions birthe another ego for your body to share. However, this alter ego has always existed within you, whether it be from an event of great fear or from an unsatiable rage. It is only from your exposure to the great depths of self that this alter ego has grown in power.</p>
+			<div element="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_SPELLCASTING" />
+			<div element="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_ID" />
+			<div element="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_EGO" />
+			<div element="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_SUPEREGO" />
+			<div element="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_HIGHER_SELF" />
+		</description>
+		<sheet display="false">
+			<description>The Path of the Alter Ego is one of conflicting emotions and a journey to self understanding.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_SPELLCASTING" level="3" />
+			<grant type="Archetype Feature" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_ID" level="3" />
+			<grant type="Archetype Feature" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_EGO" level="6" />
+			<grant type="Archetype Feature" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_SUPEREGO" level="10" />
+			<grant type="Archetype Feature" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_HIGHER_SELF" level="14" />
+		</rules>
+	</element>
+	<element name="Spellcasting" type="Archetype Feature" source="Chelonia" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_SPELLCASTING">
+		<description>
+			<p>When you reach 3rd level, your realization of your alter ego assists in your acknowledgement of the weave, granting you the ability to cast spells.</p>
+			<p class="indent"><b><i>Cantrips.</i></b> You learn three cantrips: message and two other cantrips of your choice from the wizard spell list. You learn another wizard cantrip of your choice at 10th level.</p>
+			<p class="indent"><b><i>Spell Slots.</i></b> The Alter Ego Spellcasting table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.</p>
+			<p class="indent">For example, if you know the 1st-level spell charm person and have a 1st-level and a 2nd-level spell slot available, you can cast charm person using either slot.</p>
+			<p class="indent"><b><i>Spells Known of 1st-Level and Higher.</i></b> You know three 1st-level wizard spells of your choice, two of which you must choose from the transmutation and divination spells on the wizard spell list.</p>
+			<p class="indent">The Spells Known column of the Alter Ego Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be a transmutation or divination spell of your choice, and must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.</p>
+			<p class="indent">The spells you learn at 8th, 14th, and 20th level can come from any school of magic.</p>
+			<p class="indent">Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots, and it must be a transmutation or divination spell, unless you're replacing the spell you gained at 3rd, 8th, 14th, or 20th level from any school of magic.</p>
+			<p class="indent"><b><i>Spellcasting Ability.</i></b> Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through further experimentation on the capabilities of the weave. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.</p>
+			<center>
+				<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Intelligence modifier</p>
+				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Intelligence modifier</p>
+			</center>
+			<h5 class="caption">ALTER EGO SPELLCASTING</h5>
+			<table class="class-features">
+				<thead>
+					<tr><td class="col-10">Barbarian Level</td><td class="col-10">Cantrips Known</td><td class="col-10">Spells Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td></tr>
+				</thead>
+				<tr><td> 3rd</td><td>3</td><td> 3</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 4th</td><td>3</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 5th</td><td>3</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 6th</td><td>3</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 7th</td><td>3</td><td> 5</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td> 8th</td><td>3</td><td> 6</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td> 9th</td><td>3</td><td> 6</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td>10th</td><td>4</td><td> 7</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>11th</td><td>4</td><td> 8</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>12th</td><td>4</td><td> 8</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>13th</td><td>4</td><td> 9</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>14th</td><td>4</td><td>10</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>15th</td><td>4</td><td>10</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>16th</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>17th</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>18th</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>19th</td><td>4</td><td>12</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
+				<tr><td>20th</td><td>4</td><td>13</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
+			</table>				
+		</description>
+		<sheet display="false" />
+		<spellcasting name="Path of the Alter Ego" ability="Intelligence" allowReplace="true">
+			<list>Wizard,(Transmutation||Divination)</list>
+		</spellcasting>
+		<rules>
+			<stat name="path of the alter ego:spellcasting:slots:1" value="2" level="3" />
+			<stat name="path of the alter ego:spellcasting:slots:1" value="1" level="4" />
+			<stat name="path of the alter ego:spellcasting:slots:1" value="1" level="7" />
+			<stat name="path of the alter ego:spellcasting:slots:2" value="2" level="7" />
+			<stat name="path of the alter ego:spellcasting:slots:2" value="1" level="10" />
+			<stat name="path of the alter ego:spellcasting:slots:3" value="2" level="13" />
+			<stat name="path of the alter ego:spellcasting:slots:3" value="1" level="16" />
+			<stat name="path of the alter ego:spellcasting:slots:4" value="1" level="19" />
+			<grant type="Spell" id="ID_PHB_SPELL_MESSAGE" level="3" spellcasting="Path of the Alter Ego" />
+			<select type="Spell" name="Cantrip (Path of the Alter Ego)" supports="Wizard, 0" level="3" number="2" spellcasting="Path of the Alter Ego" />
+			<select type="Spell" name="Cantrip (Path of the Alter Ego)" supports="Wizard, 0" level="10" number="1" spellcasting="Path of the Alter Ego" />
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="Wizard, 1" level="3" number="1" spellcasting="Path of the Alter Ego" allowReplace="false" />
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), 1" level="3" number="2" spellcasting="Path of the Alter Ego" />
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), $(spellcasting:slots)" level="4" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="8" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="14" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" spellcasting="Path of the Alter Ego"/>
+			<select type="Spell" name="Spell (Path of the Alter Ego)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="20" spellcasting="Path of the Alter Ego"/>
+		</rules>
+	</element>
+	<element name="The ID" type="Archetype Feature" source="Chelonia" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_ID">
+		<description>
+			<p>When you adopt this path at 3rd level you gain the ability to swap three pairs of ability scores when you rage. For example, you may swap your Strength score and your Intelligence score for one pair as well as your Constitution score and your Dexterity score for the other pair.</p>
+			<p class="indent">This change persists for an indefinite amount of time after rage is used or until the swap is reverted as a bonus action. Once you revert a swap, this bonus action cannot be used again until a short or long rest.</p>
+		</description>
+		<sheet>
+			<description>When you rage you can swap three pairs of ability scores. This change persists until you use a bonus action to revert them back to the original scores. Once you revert them back, you cannot use this bonus action again until a short or long rest.</description>
+		</sheet>
+	</element>
+	<element name="The Ego" type="Archetype Feature" source="Chelonia" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_EGO">
+		<description>
+			<p>At 6th level, you've honed your consciousness to create a mutualistic relationship with your alter ego. This relationship makes it harder for you to be affected by anything that affects your mind. While raging you gain resistance to psychic damage; advantage on checks against enchantment spells, charm, and frighten; and you cannot be knocked unconscious. When dropped to 0 hit points, the body can still move but cannot take any type of action; regular rules for death saving throws still apply.</p>
+		</description>
+		<sheet>
+			<description>While raging you gain resistance to psychic damage; advantage on checks against enchantment spells, charm, and frighten; and you cannot be knocked unconscious. When dropped to 0 hit points, the body can still move but cannot take any type of action; regular rules for death saving throws still apply.</description>
+		</sheet>
+	</element>
+	<element name="The SuperEgo" type="Archetype Feature" source="Chelonia" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_THE_SUPEREGO">
+		<description>
+			<p>At 10th level, your consciousness begins to adapt to the existence of your two egos. Your are now able to cast spells and concentrate on them while raging.</p>
+		</description>
+		<sheet>
+			<description>While raging, you can cast spells and concentrate on them.</description>
+		</sheet>
+	</element>
+	<element name="Higher Self" type="Archetype Feature" source="Chelonia" id="ID_ROCKTEM_CHELONIA_ARCHETYPE_FEATURE_PATH_OF_THE_ALTER_EGO_HIGHER_SELF">
+		<description>
+			<p>At 14th level, you have achieved oneness with your alter ego, granting you the might of both selves upon the use of an action. Perform the same swap that can be done with The ID; your ability scores are now the highest between the pre-swap and post-swap set of ability scores for 1 minute.</p>
+			<p class="indent">For Example, assume your set of ability scores (Str, Dex, Con, Int, Wis, Cha) is originally this: 20 7 18 10 12 10 and then after the swap it is 7 18 10 20 12 10, using Higher Self makes your current set of ability scores: 20 18 18 20 12 12.</p>
+			<p class="indent">Once you use this ability, you can't use it again until you finish a long rest. You gain additional uses of this ability at 17th and 20th level.</p>
+		</description>
+		<sheet action="Action">
+			<description usage="{{alter ego higher self:count}}/Long Rest">As an action you can make two sets of ability scores following the same rules of The ID and combine them, setting each ability score to the highest of the two. Once you use this ability, you can't use it again until you finish a long rest.</description>
+		</sheet>
+		<rules>
+			<stat name="alter ego higher self:count" value="1" level="14" />
+			<stat name="alter ego higher self:count" value="1" level="17" />
+			<stat name="alter ego higher self:count" value="1" level="20" />
+		</rules>
+	</element>
 </elements>
