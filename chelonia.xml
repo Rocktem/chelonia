@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Chelonia Elements</name>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="chelonia.xml" url="https://raw.githubusercontent.com/Rocktem/chelonia/master/chelonia.xml" />
 		</update>
 	</info>
@@ -95,6 +95,26 @@
     </setters>
   </element>
   
+  <element name="Something" type="Spell" source="Chelonia" id="ID_ROCKTEM_CHELONIA_SPELL_SOMETHING">
+    <supports>Wizard, Bard, Cleric</supports>
+    <description>
+      <p> Gives you something. A random object forms in your hand. The DM can decide what you receive or you could roll on the d100 table. All objects are from somewhere and in many cases will be missed by their owner (who may come looking). Some items are cursed. </p>
+    </description>
+    <setters>
+      <set name="keywords"></set>
+      <set name="level">3</set>
+      <set name="school">Conjuration</set>
+      <set name="time">1 action</set>
+      <set name="duration">Instantaneous</set>
+      <set name="range">Self</set>
+      <set name="hasVerbalComponent">true</set>
+      <set name="hasSomaticComponent">true</set>
+      <set name="hasMaterialComponent">false</set>
+      <set name="isConcentration">false</set>
+      <set name="isRitual">false</set>
+    </setters>
+  </element>
+  
   <!-- Features -->
   <element name="Expanded Spellbook" type="Option" source="My Homebrew Source" id="ID_BREW_OPTION_EXPANDED_SPELLBOOK">
     <description>
@@ -104,7 +124,7 @@
       <description>Add more spaces to save spells for the wizard per spells written into the book.</description>
     </sheet>
     <rules>
-      <select type="Spell" name="Expanded Spellbook (Wizard)" supports="Wizard" level="1" number="4" optional="true" spellcasting="Wizard" requirements="ID_WOTC_PHB_CLASS_FEATURE_WIZARD_SPELLCASTING_WIZARD" />
+      <select type="Spell" name="Expanded Spellbook (Wizard)" supports="Wizard" level="1" number="5" optional="true" spellcasting="Wizard" requirements="ID_WOTC_PHB_CLASS_FEATURE_WIZARD_SPELLCASTING_WIZARD" />
     </rules>
   </element>
   
